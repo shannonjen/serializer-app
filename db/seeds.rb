@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Movie.delete_all
+Director.delete_all
+
+Director.create(name: "Rene Laloux")
+Movie.create(title: "Fantastic Planet", director_id: Director.last.id)
